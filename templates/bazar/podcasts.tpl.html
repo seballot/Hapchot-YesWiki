@@ -1,0 +1,22 @@
+<?php echo $info_res; ?>
+<?php if (count($fiches)>0) : ?>
+    <?php echo $pager_links;?>
+    <div class="podcast-list">
+    <?php foreach($fiches as $fiche): ?>
+        <div class="row podcast bazar-entry" <?php echo $fiche['html_data'];?>>
+            <div class="image col-sm-3">
+                <a class="podcast-btn btn-play" href="<?php echo $fiche['mixcloud_url'];?>"></a>
+                <img src="<?php echo 'files/'.$fiche['imagebf_image'];?>" />
+            </div>
+            <div class="content col-sm-9">
+                <h4><?php echo $fiche['bf_titre'];?></h4>
+                <span class="date"><?php echo date("d/m/Y", strtotime($fiche['date']));?></span> - 
+                <span class="audio-length">Durée : <?php echo $fiche['duration'];?></span>
+                <div class="description"><?php echo $fiche['description'];?></div>
+            </div>
+        </div> 
+    <?php endforeach; ?>
+    </div>
+    <?php echo $pager_links; ?>
+    <?php
+endif;

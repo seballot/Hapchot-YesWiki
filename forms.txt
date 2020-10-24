@@ -1,0 +1,6 @@
+gnqutwohapchot
+
+texte***bf_titre***Titre de la fiche*** *** *** *** ***text***1*** *** *** * *** * *** *** ***
+image***bf_image***Image***300***300***600***600***right***0*** *** *** *** *** *** ***
+textelong***content***Contenu*** ***8*** *** ***html***1*** *** *** *** *** *** ***
+listedatedeb***date***Date de publication*** *** ***1*** *** ***1*** *** *** * *** * *** *** ***
