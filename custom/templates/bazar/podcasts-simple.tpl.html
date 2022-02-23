@@ -7,11 +7,13 @@
             <div class="button-play-container">
                 <a class="podcast-btn play-icon fa fa-play-circle" href="<?php echo $fiche['mixcloud_url'];?>"></a>
             </div>
-            <div class="content">
-                <h4><?php echo $fiche['bf_titre'];?></h4>
-                <span class="date"><?php echo date("d/m/Y", strtotime($fiche['date']));?></span> - 
-                <span class="audio-length">Durée : <?php echo $fiche['duration'];?></span>
-            </div>
+            <a class="modalbox" href="<?php echo $fiche['url']; ?>">
+                <div class="content">
+                    <h4><?php echo $fiche['bf_titre'];?></h4>
+                    <span class="date"><?php echo date("d/m/Y", strtotime($fiche['date']));?></span> - 
+                    <span class="audio-length">Durée : <?php echo $fiche['duration'];?></span>
+                </div>
+            </a>
         </div> 
     <?php endforeach; ?>
     </div>

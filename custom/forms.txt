@@ -1,0 +1,25 @@
+Actualités
+
+texte***bf_titre***Titre de la fiche*** *** *** *** ***text***1*** *** *** * *** * *** *** *** ***
+image***bf_image***Image***300***300***600***600***right***0*** *** *** * *** * *** *** *** ***
+textelong***content***Contenu*** ***8*** *** ***html***1*** *** *** * *** * *** *** *** ***
+listedatedeb***date***Date de publication*** *** *** *** *** ***1*** *** *** * *** * *** *** *** ***
+
+
+Podcasts
+
+texte***bf_titre***Titre*** *** *** *** ***text***1*** *** *** * *** * *** *** *** ***
+liste***ListeEmissions***Emission*** *** *** ***emission*** ***1*** *** *** * *** * *** *** *** ***
+lien_internet***mixcloud_url***Url du podcast sur Mixcloud*** *** *** *** ***url***1*** *** *** * *** * *** *** *** ***
+texte***duration***Durée du podcast*** *** *** *** ***text***0*** *** *** * *** * *** *** *** ***
+image***bf_image***Image***300***300***600***600***right***0*** *** *** * *** * *** *** *** ***
+listedatedeb***date***Date de publication*** *** *** *** *** ***0*** *** *** * *** * *** *** *** ***
+textelong***description***Description*** ***10*** *** ***html***0*** *** *** * *** * *** *** *** ***
+
+
+Members
+
+listefiches*** *** *** *** *** *** ***
+texte***bf_titre***Nom de la personne<br>*** *** *** *** ***text***1*** *** *** * *** * *** *** *** ***
+image***bf_image***Image***140***140***600***600***right***0*** *** *** * *** * *** *** *** ***
+texte***text_1602175146770***Texte, Nombre, Couleur, Url*** *** *** *** ***text***0*** *** *** * *** * *** *** *** ***

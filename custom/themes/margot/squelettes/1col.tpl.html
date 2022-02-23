@@ -17,12 +17,13 @@
   <!-- Favicons -->
   <!-- <link rel="shortcut icon" type="image/x-icon" href="{{configuration param="theme_path"}}images/favicon.ico" />
   <link rel="apple-touch-icon" href="{{configuration param="theme_path"}}images/apple-touch-icon.png" /> -->
-  <link rel="icon" type="image/png" href="{{configuration param="theme_path"}}images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/@barba/core"></script> 
 
   {{linkstyle}}
   <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="{{configuration param='theme_path'}}custom/themes/hapchot.css?v=3" />
   {{linkrss}}
 </head>
 
@@ -36,26 +37,24 @@
               {{include page="PageTitre" doubleclic="1" class="logo-and-title"}}
             </a>
           </div> <!-- /.navbar-header -->
-
+          
           </iframe>
           {{include page="PageMenuHaut" class="yw-topnav topnavpage links-container" doubleclic="1" actif="1"}}
           {{include page="PageRapideHaut" class="yw-topnav-fast-access pull-right" doubleclic="1" actif="1"}}
         </div> <!-- /.container -->
     </nav><!-- /#yw-topnav -->
 
-    <header id="yw-header">
+    <header id="yw-header">      
       <!-- { { include page="PageHeader" class="yw-headerpage" doubleclic="1" } } -->
     </header><!-- /#yw-header -->
 
     <div id="yw-main" role="main" {{doubleclic}} data-barba="container" data-barba-namespace="home">
-      <div class="yw-main-content">
+      <div class="yw-main-content alone">
         {WIKINI_PAGE}
-      </div>
-      <div class="side-bar right">
-        {{include page="PageRight" class="menupage" doubleclic="1" actif="1"}}
-      </div>
-
+      </div> <!-- /.container -->
+      
       {{linkjavascript}}
+      <script src="{{configuration param='theme_path'}}custom/themes/hapchot.js"></script>
     </div><!-- /#yw-main -->
 
     {{section visibility="@admins"}}
@@ -64,7 +63,7 @@
 
     <footer id="yw-footer">
       <div class="container">
-        {{include page="PageFooter" class="footerpage" doubleclic="1"}}
+        {{include page="PageFooter" class="footerpage" doubleclic="1"}}        
       </div> <!-- /.container -->
     </footer><!-- /#yw-footer -->
 
@@ -72,6 +71,6 @@
     </div>
   </div> <!-- /#yw-container -->
 
-
+  
 </body>
 </html>

@@ -1,11 +1,16 @@
 body {
-	--primary-color: #f9be1b; // #fac42f;
+	--primary-color: #f9be1b;
 	--secondary-color-1: #1A89A0;
   --main-text-fontfamily: 'Open Sans', sans-serif;
   --neutral-light-color: #4e5055;
   --main-bg-color: white;
   --navbar-text-color: #4e5055;
   --navbar-link-color: #4e5055;
+  --navbar-bg-color: var(--primary-color);
+}
+.navbar-default {
+  background-color: var(--primary-color) !important;
+  position: relative !important;
 }
 .panel-heading, .form-group  {
   --neutral-light-color: white;
@@ -59,11 +64,14 @@ body {
 }
 
 /* SIDEBAR */
-#yw-main .side-bar {
-  width: 25rem;
-}
-#yw-main .side-bar.right {
-  margin-left: 4rem;
+@media (min-width: 800px) {
+    #yw-main .side-bar {
+        width: 60%;
+        max-width: 500px;
+    }
+    #yw-main .side-bar.right {
+        margin-left: 4rem;
+    }
 }
 
 /* PODCASTY AND LIVE PLAYER */
@@ -120,6 +128,9 @@ body {
   overflow: hidden;
   height: 100%;
 }
+.podcast a.modalbox:hover {
+  color: var(--primary-color);
+}
 .podcast h4 {
   font-size: 1.2rem;
   margin-top: 0;
@@ -128,6 +139,9 @@ body {
 .podcast.small h4 {
   font-size: .9rem;
   color: #4e5055;
+}
+.podcast .category {
+  line-height: 3;
 }
 .podcast .date {
   /* font-style: italic; */
@@ -139,6 +153,23 @@ body {
 .podcast .description {
   margin: .5rem 0;  
   text-align: justify;
+}
+.podcast .content {
+  max-height: 600px;
+  transition: max-height 2s;
+}
+.podcast:not(:hover) .content {
+  max-height: 150px;
+  transition: max-height 1s;
+}
+.podcast:not(:hover) .content:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-image: linear-gradient(#ffffff00, white);
 }
 .podcast.small {
   display:flex;
@@ -173,4 +204,51 @@ body {
 }
 .bazar-search input.btn-primary {
   padding: 0 1.2rem !important;
+}
+
+/* NEWS */
+.agenda-entry-container {
+    width: 50% !important;
+}
+
+/* HOME-PAGE */
+.home-page .podcast .description {
+  display: none;
+}
+.home-page .podcast .content:after {
+  content: none;
+}
+.home-page .podcast img {
+    height: 150px;
+    object-fit: cover;
+}
+.home-page .agenda-subtitle {
+    display: none;
+}
+.home-page .agenda-entry fig-caption h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: #4e5056;
+}
+.home-page .agenda-container .agenda-entry fig-caption:before {
+    background-color: white;
+}
+.home-page .agenda-entry fig-caption:after {
+    background-image: linear-gradient(#ffffff00, white);
+}
+.home-page .agenda-container .agenda-entry .date {
+    color: var(--secondary-color-1);
+}
+
+@media (max-width: 800px) {
+    .podcast .content { padding: 1rem; }
+}
+.home-page .agenda-container ~ .bazar_numero {
+    --primary-color: var(--secondary-color-1)
+}
+.home-page .agenda-container ~ .bazar_numero .active a {
+    color: white;
+}
+.home-page {
+    max-width: 1400px;
 }
