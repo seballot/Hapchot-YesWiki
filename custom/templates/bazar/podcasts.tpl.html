@@ -1,5 +1,16 @@
 <?php echo $info_res; ?>
 <?php $categories = baz_valeurs_liste('ListeCategories')['label'];  ?>
+<?php $categoriesDisplay = [
+    'vie-locale' => ['link' => 'VieLocale', 'class' => 'primary'],
+    'chroniques' => ['link' => 'ChroNiques', 'class' => 'secondary-1'],
+    'culture' => ['link' => 'CulTure', 'class' => 'success'],
+    'societe' => ['link' => 'SociéTé', 'class' => 'danger'],
+    'sport' => ['link' => 'SpoRt', 'class' => 'neutral'],
+    'musique' => ['link' => 'MusiQue', 'class' => 'warning'],
+    'sante' => ['link' => 'SanTé', 'class' => 'default'],
+    'jeune-publique' => ['link' => 'JeunePublic', 'class' => 'info']
+];
+?>
 <?php if (count($fiches)>0) : ?>
     <?php echo $pager_links;?>
     <div class="podcast-list">
@@ -18,7 +29,12 @@
                     <span class="audio-length">Durée : <?php echo $fiche['duration'];?></span>
                 </div>
                 <?php if (!empty($fiche['listeListeCategoriescategory'])) : ?>
-                    <div class="category label label-secondary-1"><?php echo $categories[$fiche['listeListeCategoriescategory']];?></div>
+                    <?php $display = $categoriesDisplay[$fiche['listeListeCategoriescategory']]; ?>
+                    <a href="/?<?php echo $display['link'] ?>" class="no-underline">
+                        <div class="category label label-<?php echo $display['class'] ?>">
+                            <?php echo $categories[$fiche['listeListeCategoriescategory']];?>
+                        </div>
+                    </a>
                 <?php endif; ?>
                 <div class="description"><?php echo $fiche['description'];?></div>
             </div>

@@ -252,3 +252,7 @@ body {
 .home-page {
     max-width: 1400px;
 }
+
+a.no-underline:hover {
+  text-decoration: none !important;
+}
